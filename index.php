@@ -2,6 +2,7 @@
  echo('salomlar');
  define('YOUTUBE_DL', '/usr/local/bin/youtube-dl'); // find your youtube-dl path and replace with it
  $youtube_video = $_GET['link']; // replace with any youtube video
+echo($youtube_video);
 /**
  * Fetches direct URL of given youtube video
  */
