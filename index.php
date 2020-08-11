@@ -8,7 +8,7 @@ echo($youtube_video);
  */
 function getDirectUrl($youtube_video) {
   // lets build command to get direct url via youtube-dl
-  $video_json_command = YOUTUBE_DL.' -g '.$youtube_video;
+  $video_json_command = YOUTUBE_DL.'--rm-cache-dir -g '.$youtube_video;
   // get url
   $direct_url = shell_exec($video_json_command);
 // remove any possible white spaces
