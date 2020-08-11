@@ -15,3 +15,4 @@ function getDirectUrl($youtube_video) {
   $direct_url = str_replace(array(' ',"\n"), '', $direct_url);
 return $direct_url;
  }
+echo(getDirectUrl($youtube_video));
