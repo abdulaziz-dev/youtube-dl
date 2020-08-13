@@ -2,13 +2,12 @@
  echo('salomlar');
  define('YOUTUBE_DL', 'youtube-dl'); // find your youtube-dl path and replace with it
  $youtube_video = $_GET['link']; // replace with any youtube video
-echo($youtube_video);
 /**
  * Fetches direct URL of given youtube video
  */
 function getDirectUrl($youtube_video) {
   // lets build command to get direct url via youtube-dl
-  $video_json_command = YOUTUBE_DL.' -g '.$youtube_video;
+  $video_json_command = YOUTUBE_DL.'.'bestvideo[height<=480]+bestaudio/best[height<=480].' -g '.$youtube_video;
  $clcmd = YOUTUBE_DL.' --no-cache-dir';
  shell_exec($clcmd);
   // get url
